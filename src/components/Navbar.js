@@ -78,7 +78,7 @@ function NavBar() {
                 <AiOutlineFundProjectionScreen
                   style={{ marginBottom: "2px" }}
                 />{" "}
-                Galerias
+                Gallery
               </Nav.Link>
             </Nav.Item>
 
