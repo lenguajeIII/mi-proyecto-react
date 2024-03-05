@@ -29,7 +29,7 @@ function Galerias() {
                        
               imgPath={baleada}
               isBlog={false}
-              title="Ver Galería de alimentos"
+              title="Galería de alimentos"
               
               description="
               ### Criterios de Aceptación:
