@@ -104,7 +104,7 @@ function NavBar() {
                 <AiOutlineFundProjectionScreen
                   style={{ marginBottom: "2px" }}
                 />{" "}
-                Login
+                Contact me
               </Nav.Link>
             </Nav.Item>
 
