@@ -93,7 +93,7 @@ function Galerias() {
             <ProjectCard
               imgPath={bici}
               isBlog={false}
-              title="Productos"
+              title="Ver Productos"
               description="
               ### Criterios de Aceptación:
 
