@@ -75,7 +75,7 @@ button:focus {
 /* --------- */
 /* Navbar Section  */
 /* --------- */
-/* .sticky {
+.sticky {
   background-color: #1b1a2ea9 !important;
   transition: all 0.3s ease-out 0s !important;
   box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
@@ -203,7 +203,7 @@ button:focus {
 
 .navbar-nav .nav-item a:hover::after {
   width: 100%;
-} */
+}
 
 /* --------- */
 /* Home section */

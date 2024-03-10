@@ -6,7 +6,7 @@ import { CgWebsite } from "react-icons/cg";
 
 function cards(props) {
   return (
-    <Card className="project-card-view">
+    <Card className="project-card-view" onClick={props.onCardClick}>
       <Card.Img variant="top" src={props.imgPath} alt="card-img" />
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>
