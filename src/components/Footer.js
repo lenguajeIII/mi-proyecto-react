@@ -34,14 +34,15 @@ function Footer() {
 
             <li className="social-icons">
               <a
-                href="https://wa.me/50432648781"
+                href="https://wa.me/50433979041"
                 style={{ color: "white" }}
                 target="_blank" 
                 rel="noopener noreferrer"
               >
                 <AiOutlineWhatsApp />
               </a>
-            </li>
+            </li>          
+
           </ul>
         </Col>
       </Row>
