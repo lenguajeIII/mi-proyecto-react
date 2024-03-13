@@ -19,6 +19,7 @@ import {
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./STYLES/login.css";
+import "./STYLES/Product.css";
 import "./STYLES/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Login from "./PAGES/Login";

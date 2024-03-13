@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Container, Row, Col, InputGroup, FormControl, Button } from "react-bootstrap";
 import Particle from "../components/Particle";
-import Tecnologia from "../MEDIA/images/Productos/Producto2.jpg"
+import Tecnologia from "../MEDIA/images/Productos/Producto2.jpg";
 import Hogar from "../MEDIA/images/Productos/Producto1.jpg";
 
 
 const mockProducts = [
+  
   { id: 1 ,title: "Televisores y entretenimiento" , category: "Categoría A", imageUrl: Tecnologia},
   { id: 2, title: "Computadoras y tablet", category: "Categoría B", imageUrl: Hogar },
   { id: 3, title: "Celulares y accesorios", category: "Categoría A", imageUrl:Tecnologia },
@@ -14,6 +15,11 @@ const mockProducts = [
   { id: 6, title: "Audio", category: "Categoría B", imageUrl: Hogar },
   { id: 7, title: "Audifonos", category: "Categoría A", imageUrl:Tecnologia },
   { id: 8, title: "Gamin", category: "Categoría B", imageUrl: Hogar },
+  { id: 9, title: "Electrodomesticos", category: "Categoría A", imageUrl:Tecnologia },
+  { id: 10, title: "Audio", category: "Categoría B", imageUrl: Hogar },
+  { id: 11, title: "Audifonos", category: "Categoría A", imageUrl:Tecnologia },
+  { id: 12, title: "Gamin", category: "Categoría B", imageUrl: Hogar },
+
 ];
 
 function Product() {
@@ -31,8 +37,8 @@ function Product() {
   return (
     <Container>
       <Particle />
-      <h1>GALERÍA DE PRODUCTOS</h1>
-      <InputGroup className="mb-3">
+      <h1 className="product-gallery-header">GALERÍA DE PRODUCTOS</h1>
+      <InputGroup className="mb-3 search-bar-container">
         <FormControl
           placeholder="Buscar productos..."
           onChange={handleSearchChange}
