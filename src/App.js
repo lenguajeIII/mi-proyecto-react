@@ -10,7 +10,6 @@ import Footer from "./components/Footer";
 
 
 import Galerias from "./PAGES/Galerias";
-import Contactme from "./PAGES/Contactme";
 import {
   BrowserRouter as Router,
   Route,
@@ -20,14 +19,13 @@ import {
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./STYLES/login.css";
-import "./STYLES/Product.css";
+import "./STYLES/footer.css"
 import "./STYLES/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Login from "./PAGES/Login";
 import Food from "./PAGES/Food";
 import Portrait from "./PAGES/Portrait";
 import Product from "./PAGES/Product";
-
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -53,7 +51,6 @@ function App() {
           <Route path="/food" element={<Food />} />
           <Route path="/portrait" element={<Portrait />} />
           <Route path="/product" element={<Product />} />
-          <Route path="/contactme" element={<Contactme />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
         <Footer />
