@@ -25,9 +25,9 @@ import "./STYLES/Product.css";
 import "./STYLES/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Login from "./PAGES/Login";
-import Food from "./PAGES/Food";
-import Portrait from "./PAGES/Portrait";
-import Product from "./PAGES/Product";
+import Food from "./PAGES/food";
+import Portrait from "./PAGES/portrait";
+import Product from "./PAGES/product";
 
 function App() {
   const [load, upadateLoad] = useState(true);
