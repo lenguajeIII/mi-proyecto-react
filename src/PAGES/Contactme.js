@@ -1,80 +1,48 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import Particle from "../components/Particle";
+import "../STYLES/contactme.css";
 
 
 function Contactme() {
   return (
     <Container fluid className="contactme-section">
       <Particle />
-        
-      <html lang="en" dir="ltr">
-         
-        <div class="container">
-            <div class="item">
-                
-                <h2 class="item"><i class='bx bxs-building'></i>Contáctanos</h2>
-                
+
+      <html lang="es">
+        <body class="flp">
+          <h1 class="h1txt">¡Contáctanos!
+
+          <p>
+          Puedes Registrarte
+          <p>
+          para agregar imágenes
+          </p>
+          </p>
+          
+          </h1>
+          <div class="background_ctm">
+            <div class="container_ctm">
+              <h2>Registro</h2>
+              <form action="#" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" requid></input>
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required></input>
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@gmail.com" required></input>
+                <label for="telefono">Teléfono:</label>
+                <input type="number" id="telefono" name="telefono" inputMode="numeric" required></input>
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" required></input>
+                <input type="submit" value="Registrarse"></input>
+              </form>
             </div>
-            </div>
+          </div>
+        </body>
+      </html>
 
 
-        <div class="container">
-            <div class="item">
-    
-                <div class="container">
-                        <div class="title">Registration</div>
-                        <div class="content">
-                    </div>
-                    <form action="#">
-                    <div class="user-details">
-                        <div class="input-box">
-                        <span class="details">Full Name</span>
-                        <input type="text" placeholder="Enter your name" required>
-                        </input> 
-                        </div>
-                        <div class="input-box">
-                        <span class="details">Username</span>
-                        <input type="text" placeholder="Enter your username" required> 
-                        </input> 
-                        </div>
-                        </div>
-                        <div class="input-box">
-                        <span class="details">Email</span>
-                        <input type="text" placeholder="Enter your email" required>
-                        </input> 
-                        </div>
-                        <div class="input-box">
-                        <span class="details">Phone Number</span>
-                        <input type="text" placeholder="Enter your number" required>
-                        </input> 
-                        </div>
-                        <div class="input-box">
-                        <span class="details">Password</span>
-                        <input type="text" placeholder="Enter your password" required>
-                        </input> 
-                        </div>
-                        <div class="input-box">
-                        <span class="details">Confirm Password</span>
-                        <input type="text" placeholder="Confirm your password" required>
-                        </input> 
-                        </div>
-
-
-
-
-                    <div class="button">
-                        <input type="submit" value="Register">
-                        </input> 
-                    </div>
-                    </form>
-                </div>
-
-            </div>
-            </div>
-
-
-      </html>   
     </Container>  
   );
 }

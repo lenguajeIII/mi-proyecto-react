@@ -1,0 +1,73 @@
+/* --------- */
+/* Contactme */
+/* --------- */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.h1txt{
+  margin-top: 18%;
+  text-align: center;
+  justify-content: center;
+  color: rgb(156, 71, 146);
+}
+.flp{
+  display: flex;
+  justify-content: space-between;
+  margin: 5rem 10rem 15rem 10rem;
+
+}
+
+.background_ctm {
+   /* Cambia 'background_image.jpg' por la ruta de tu imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  height: 150%;
+}
+
+.container_ctm {
+  max-width: 400px;
+  margin: 50px auto;
+  background: rgb(135,73,179);
+background: radial-gradient(circle, rgba(135,73,179,0.6778361002604167) 0%, rgba(78,107,142,1) 100%);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  width: calc(100% - 12px);
+  padding: 6px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background: rgb(149,77,184);
+  background: radial-gradient(circle, rgba(149,77,184,1) 17%, rgba(191,73,97,1) 97%);
+  color: #1f1d1d;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
