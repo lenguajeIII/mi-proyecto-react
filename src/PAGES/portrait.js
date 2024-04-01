@@ -32,7 +32,7 @@ const mockProducts = [
 
 ];
 
-function Product() {
+function Portrait() {
   const [products] = useState(mockProducts);
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -72,6 +72,6 @@ function Product() {
   );
 }
 
-export default Product;
+export default Portrait;
 
 
