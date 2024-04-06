@@ -10,8 +10,7 @@ import { Link } from "react-router-dom";
 // import { ImBlog } from "react-icons/im";
 import {
   // AiFillStar,
-  AiOutlineHome,
-  AiOutlineFundProjectionScreen,
+  AiOutlineHome
   // AiOutlineUser,
 } from "react-icons/ai";
 import { IoCameraOutline } from "react-icons/io5";
