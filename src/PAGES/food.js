@@ -1,7 +1,9 @@
+
 import React, { useState, useEffect } from 'react';
 import { Modal, Carousel } from 'react-bootstrap';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
+import { useNavigate } from 'react-router-dom';
 
 // Importa tus imágenes aquí
 import alimen_1 from '../MEDIA/images/1.jpg';
@@ -16,27 +18,27 @@ import alimen_9 from '../MEDIA/images/9.jpg';
 import alimen_10 from '../MEDIA/images/10.jpg';
 
 function Food() {
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(true);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
+  const navigate = useNavigate();
 
   const images = [alimen_1, alimen_2, alimen_3, alimen_4, alimen_5, alimen_6, alimen_7, alimen_8, alimen_9, alimen_10];
-  
-  useEffect(() => {
-    setShowModal(true); // Abre el modal automáticamente al cargar la página
-  }, []);
 
-  const closeModal = () => setShowModal(false);
+  const closeModal = () => {
+    setShowModal(false);
+    navigate('/galeria'); // Asegúrate de que esta es la ruta correcta
+  };
 
   const openLightbox = (index) => {
-    setShowModal(false); // Cierra el modal antes de abrir el Lightbox
     setActiveIndex(index);
     setLightboxOpen(true);
+    setShowModal(false); // Cierra el modal antes de abrir el Lightbox
   };
 
   const closeLightbox = () => {
     setLightboxOpen(false);
-    setTimeout(() => setShowModal(true), 300); // Reabre el modal después de cerrar el Lightbox
+    setShowModal(true); // Reabre el modal al cerrar el Lightbox
   };
 
   return (
@@ -46,9 +48,7 @@ function Food() {
           <Carousel
             activeIndex={activeIndex}
             onSelect={(selectedIndex) => setActiveIndex(selectedIndex)}
-            interval={1700}
-            nextLabel=""
-            prevLabel=""
+            interval={null} // Deshabilita la transición automática
           >
             {images.map((img, index) => (
               <Carousel.Item key={index} onClick={() => openLightbox(index)}>
@@ -60,14 +60,15 @@ function Food() {
       </Modal>
 
       {lightboxOpen && (
-        <Lightbox
-          mainSrc={images[activeIndex]}
-          nextSrc={images[(activeIndex + 1) % images.length]}
-          prevSrc={images[(activeIndex + images.length - 1) % images.length]}
-          onCloseRequest={closeLightbox}
-          onMovePrevRequest={() => setActiveIndex((activeIndex + images.length - 1) % images.length)}
-          onMoveNextRequest={() => setActiveIndex((activeIndex + 1) % images.length)}
-        />
+          <Lightbox
+            mainSrc={images[activeIndex]}
+            nextSrc={images[(activeIndex + 1) % images.length]}
+            prevSrc={images[(activeIndex + images.length - 1) % images.length]}
+            onCloseRequest={closeLightbox}
+            onMovePrevRequest={() => setActiveIndex((activeIndex + images.length - 1) % images.length)}
+            onMoveNextRequest={() => setActiveIndex((activeIndex + 1) % images.length)}
+          />
+
       )}
     </>
   );

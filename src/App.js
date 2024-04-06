@@ -24,6 +24,8 @@ import "./STYLES/footer.css"
 import "./STYLES/Product.css";
 import "./STYLES/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./STYLES/Navbar.css";
+import "./STYLES/food.css";
 import Login from "./PAGES/Login";
 import Food from "./PAGES/food";
 import Portrait from "./PAGES/portrait";

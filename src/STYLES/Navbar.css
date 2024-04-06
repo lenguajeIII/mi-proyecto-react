@@ -1,0 +1,5 @@
+.navbar,
+.sticky {
+    z-index: 1000;
+    /* Asegúrate de que este valor sea menor que el z-index del Lightbox */
+}

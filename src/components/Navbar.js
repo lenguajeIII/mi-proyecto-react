@@ -10,11 +10,12 @@ import { Link } from "react-router-dom";
 // import { ImBlog } from "react-icons/im";
 import {
   // AiFillStar,
-  AiOutlineHome,
-  AiOutlineFundProjectionScreen,
+  AiOutlineHome
   // AiOutlineUser,
 } from "react-icons/ai";
+import { IoCameraOutline } from "react-icons/io5";
 import { LoginButton } from "../PAGES/Login";
+import { MdContactPhone } from "react-icons/md";
 
 // import { CgFileDocument } from "react-icons/cg";
 
@@ -77,7 +78,7 @@ function NavBar() {
                 to="/galeria"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineFundProjectionScreen
+                <IoCameraOutline
                   style={{ marginBottom: "2px" }}
                 />{" "}
                 Gallery
@@ -88,6 +89,7 @@ function NavBar() {
 
 
             <Nav.Item>
+              <Nav.Link>            
               <LoginButton />
               {/* <Nav.Link
                 as={Link}
@@ -99,6 +101,7 @@ function NavBar() {
                 />{" "}
                 Login
               </Nav.Link> */}
+              </Nav.Link>
             </Nav.Item>
 
             </Nav>
@@ -110,7 +113,7 @@ function NavBar() {
                 to="/contactme"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineFundProjectionScreen
+                <MdContactPhone
                   style={{ marginBottom: "2px" }}
                 />{" "}
                 Contactme
