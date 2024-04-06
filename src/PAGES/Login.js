@@ -4,6 +4,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { Container } from "react-bootstrap";
 // import ProjectCard from "./ProjectCards";
 import Particle from "../components/Particle";
+import { LuUser } from "react-icons/lu";
 // import leaf from "../../Assets/Projects/leaf.jpg";
 // import baleada from "../../MEDIA/images/baleada.jpg";
 // import retrato from "../../MEDIA/images/retrato.jpeg";
@@ -16,9 +17,14 @@ import Particle from "../components/Particle";
 
 
 export const LoginButton = () => {
-  const {loginWithRedirect} = useAuth0();
+  const { loginWithRedirect } = useAuth0();
 
-  return <button onClick={ ()=> loginWithRedirect()}>Login</button>
+  return (
+    <button className="transparent-button" onClick={() => loginWithRedirect()}>
+      <LuUser style={{ marginBottom: "4px" }}/>
+      Login
+    </button>
+  );
 }
 
 

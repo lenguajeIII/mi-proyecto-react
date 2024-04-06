@@ -26,6 +26,16 @@
     font-size: 40px;
     line-height: 1;
   }
+
+  .transparent-button {
+    background-color: transparent;
+    /* Puedes agregar otros estilos según sea necesario */
+    color: white;
+    border: 1px solid transparent;
+    padding: 0px 0px;
+    cursor: pointer;
+    /* Agrega cualquier otro estilo que necesites */
+  }
   /* .text-item p{
     font-size: 16px;
     margin: 20px 0;
