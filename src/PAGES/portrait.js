@@ -77,7 +77,6 @@
 import React, { useState, Component } from "react";
 import { Container, Row, Col, InputGroup, FormControl, Button } from "react-bootstrap";
 import "../style.css";
-import { FacebookShareButton, TwitterShareButton, WhatsappShareButton } from 'react-share';
 
 
 import Particle from "../components/Particle";
