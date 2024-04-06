@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
+// import { useAuth0 } from "@auth0/auth0-react";
 // import logo from "../Assets/logo.png";
 // import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
@@ -13,6 +14,7 @@ import {
   AiOutlineFundProjectionScreen,
   // AiOutlineUser,
 } from "react-icons/ai";
+import { LoginButton } from "../PAGES/Login";
 
 // import { CgFileDocument } from "react-icons/cg";
 
@@ -82,8 +84,12 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
+            <Nav>
+
+
             <Nav.Item>
-              <Nav.Link
+              <LoginButton />
+              {/* <Nav.Link
                 as={Link}
                 to="/login"
                 onClick={() => updateExpanded(false)}
@@ -92,9 +98,26 @@ function NavBar() {
                   style={{ marginBottom: "2px" }}
                 />{" "}
                 Login
+              </Nav.Link> */}
+            </Nav.Item>
+
+            </Nav>
+            
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/contactme"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineFundProjectionScreen
+                  style={{ marginBottom: "2px" }}
+                />{" "}
+                Contactme
               </Nav.Link>
             </Nav.Item>
 
+            
             {/* <Nav.Item>
               <Nav.Link
                 as={Link}
