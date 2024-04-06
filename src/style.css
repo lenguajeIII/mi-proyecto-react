@@ -573,7 +573,16 @@ body {
 }
 
 
-
+App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.share-buttons {
+  margin: auto;
+  color: blue;
+  display: inline-flex;
+  gap: 9px;
+}
 
 /* --------- */
 /* Resume */
