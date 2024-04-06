@@ -16,33 +16,33 @@
   }
   
   .input-group {
-    max-width: 500px; 
+    max-width: 500px; /* Limitar el ancho del campo de búsqueda */
   }
   
   
   
   .product-item {
-    border: 2px solid #600463;
+    border: 2px solid #600463; /* Borde más claro */
     border-radius: 1rem;
     padding: 1rem;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   }
   
   .product-item:hover {
-    transform: scale(); 
-    box-shadow: 0 5px 15px rgba(0, 2, 0, 0.1); 
+    transform: scale(); /* Ligeramente más grande al pasar el mouse */
+    box-shadow: 0 5px 15px rgba(0, 2, 0, 0.1); /* Sombra suave al pasar el mouse */
   }
   
   .product-item img {
-    height: auto; 
-    width: auto; 
+    height: auto; /* Altura fija para uniformidad */
+    width: auto; /* Ancho automático para mantener la relación de aspecto */
     margin-bottom: 1rem;
-    object-fit: contain; 
+    object-fit: contain; /* Asegurar que la imagen se ajuste correctamente */
   }
   
   .product-item h5 {
     color: #ea2ef1;
     margin-top: 0.5rem;
-    font-size: 1.0rem; 
+    font-size: 1.0rem; /* Tamaño de fuente más grande para los títulos */
   }
   

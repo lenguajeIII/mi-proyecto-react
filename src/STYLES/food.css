@@ -1,0 +1,8 @@
+/* Aumenta el z-index del Lightbox */
+.react-image-lightbox-overlay {
+    z-index: 1050;
+}
+
+.react-image-lightbox-nav {
+    z-index: 1051;
+}
