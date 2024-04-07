@@ -571,19 +571,16 @@ body {
   font-weight: 500 !important;
   padding-top: 60px !important;
 }
-
-
-App {
+.App {
   font-family: sans-serif;
   text-align: center;
 }
-.share-buttons {
+.share-buttons{
   margin: auto;
-  color: blue;
-  display: inline-flex;
+  color:blue;
+  display: inline-flex; 
   gap: 9px;
 }
-
 /* --------- */
 /* Resume */
 /* --------- */

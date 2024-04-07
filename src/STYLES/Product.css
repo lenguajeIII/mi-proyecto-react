@@ -81,10 +81,21 @@
     margin-bottom: 1rem;
     object-fit: contain; /* Asegurar que la imagen se ajuste correctamente */
   }
+  .product-item h4 {
+    color: #ea2ef1;
+    margin-top: 0.5rem;
+    font-size: 1.0rem; /* Tamaño de fuente más grande para los títulos */
+  }
   
   .product-item h5 {
     color: #ea2ef1;
     margin-top: 0.5rem;
     font-size: 1.0rem; /* Tamaño de fuente más grande para los títulos */
   }
-  
+
+  .product-item h6 {
+    color: #ea2ef1;
+    margin-top: 0.5rem;
+    font-size: 1.0rem; /* Tamaño de fuente más grande para los títulos */
+  }
+

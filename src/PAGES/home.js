@@ -10,7 +10,11 @@ import Particle from "../components/Particle";
 import Type from "../components/Type";
 import Type2 from "../components/Type2";
 import Type3 from "../components/Type3";
+import { FacebookShareButton, TwitterShareButton, WhatsappShareButton,FacebookIcon,TwitterIcon,WhatsappIcon } from 'react-share';
 
+const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
+// Get the Title of the current page dynamically
+const title = typeof document !== 'undefined' ? document.title : 'Check out this awesome content!';
 function Home() {
   return (
     <section>
@@ -19,12 +23,7 @@ function Home() {
         <Container className="home-content">
           <Row>
             <Col md={10} className="home-header">
-              <h1 style={{ paddingBottom: 8 }} className="heading">
-                !Hola Bienvenido a Nuestro Portafolio!{" "}
-                <span className="wave" role="img" aria-labelledby="wave">
-                  👋🏻
-                </span>
-              </h1>
+             
               
 
               {/* <h1 className="heading-name">
