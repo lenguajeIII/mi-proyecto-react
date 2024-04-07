@@ -74,7 +74,7 @@
 // export default Portrait;
 
 
-import React, { useState, Component } from "react";
+import React, { useState } from "react";
 import { Container, Row, Col, InputGroup, FormControl, Button } from "react-bootstrap";
 import "../style.css";
 
@@ -136,8 +136,9 @@ function Portrait() {
           placeholder="Buscar retratos..."
           onChange={handleSearchChange}
         />
-        <Button variant="outline-secondary">Buscar</Button>
+       
       </InputGroup>
+     
       <Row>
   {filteredProducts.map(product => (
     <Col key={product.id} xs={12} md={4} lg={3} className="mb-4">
@@ -145,7 +146,7 @@ function Portrait() {
         {/* Asegúrate de que product.imageUrl apunte a la URL correcta */}
         <img src={product.imageUrl} alt={product.title} className="img-fluid" />
         <h5>{product.title}</h5>
-       
+        <h5>{product.category}</h5>
       </div>
     </Col>
   ))}
