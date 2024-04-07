@@ -91,6 +91,7 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link>            
               <LoginButton />
+              {/* <LogoutButton /> */}
               {/* <Nav.Link
                 as={Link}
                 to="/login"

@@ -17,15 +17,35 @@ import { LuUser } from "react-icons/lu";
 
 
 export const LoginButton = () => {
-  const { loginWithRedirect } = useAuth0();
+  const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
 
   return (
-    <button className="transparent-button" onClick={() => loginWithRedirect()}>
-      <LuUser style={{ marginBottom: "4px" }}/>
-      Login
-    </button>
+    <div>
+      {isAuthenticated ? (
+        <button className="transparent-button" onClick={() => logout({ returnTo: window.location.origin })}>
+          Logout
+        </button>
+      ) : (
+        <button className="transparent-button" onClick={() => loginWithRedirect()}>
+          <LuUser style={{ marginBottom: "4px" }}/>
+          Login
+        </button>
+      )}
+    </div>
   );
-}
+};
+
+
+// export const LoginButton = () => {
+//   const { loginWithRedirect } = useAuth0();
+
+//   return (
+//     <button className="transparent-button" onClick={() => loginWithRedirect()}>
+//       <LuUser style={{ marginBottom: "4px" }}/>
+//       Login
+//     </button>
+//   );
+// }
 
 
 function Login() {

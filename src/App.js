@@ -3,6 +3,7 @@ import Preloader from "../src/components/Pre";
 import Navbar from "./components/Navbar";
 import Home from "./PAGES/home";
 import Contactme from "./PAGES/Contactme"
+import { Profile } from "./PAGES/Profile";
 
 // import Home from "./components/Home/Home";
 // import About from "./components/About/About";
@@ -27,6 +28,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./STYLES/Navbar.css";
 import "./STYLES/food.css";
 import Login from "./PAGES/Login";
+// import Logout from "./PAGES/Logout";
 import Food from "./PAGES/food";
 import Portrait from "./PAGES/portrait";
 import Product from "./PAGES/product";
@@ -51,7 +53,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />  
           <Route path="/galeria" element={<Galerias />} />          
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<Login />} />          
+          <Route path="/profile" element={<Profile />} />
           <Route path="/contactme" element={<Contactme />} />
           <Route path="/food" element={<Food />} />
           <Route path="/portrait" element={<Portrait />} />
