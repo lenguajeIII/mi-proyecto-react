@@ -3,10 +3,11 @@ import { Container, Row, Col,  } from "react-bootstrap";
 import "react-image-lightbox/style.css";
 import Particle from "../components/Particle";
 import ProjectCard from "../components/cards";
+import { MdContactPhone } from "react-icons/md";
 
 // Tus imágenes importadas
 import baleada from "../MEDIA/images/baleada.jpg";
-import retrato from "../MEDIA/images/retrato.jpeg";
+import retrato from "../MEDIA/images/retrato.jpg";
 import bici from "../MEDIA/images/bici.jpg";
 import { Link } from "react-router-dom";
 
@@ -22,17 +23,18 @@ function Galerias() {
           Nuestra <strong className="purple"> Galería </strong>
         </h1>
         <p style={{ color: "white" }}>Lenguaje III</p>
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+        <Row style={{ justifyContent: "center", paddingBottom: "0px" }}>
 
           {/* Cards de Alimentos*/}
           <Col md={4} className="project-card">        
 
-            <Link to="/food">
+
+            <Link to="/food"className="text-decoration-none">
             <ProjectCard   
 
               imgPath={baleada}
               isBlog={false}
-              title="Ver Galería de alimentos"
+              title="Galería de alimentos"
               description=" "          
               />
               </Link>
@@ -41,11 +43,11 @@ function Galerias() {
           {/* Card de Retratos */}          
           <Col md={4} className="project-card">          
 
-            <Link to="/portrait">
+            <Link to="/portrait"className="text-decoration-none">
             <ProjectCard
               imgPath={retrato}
               isBlog={false}
-              title="Ver Retratos profesionales"
+              title="Retratos profesionales"
               description=" "              
             />
             </Link>
@@ -53,11 +55,11 @@ function Galerias() {
 
           {/* Card de Productos*/} 
           <Col md={4} className="project-card">
-          <Link to="/product">
+          <Link to="/product"className="text-decoration-none">
             <ProjectCard
               imgPath={bici}
               isBlog={false}
-              title=" Ver Productos"
+              title=" Productos"
               description=""              
             />
             </Link>

@@ -6,7 +6,6 @@ import homeLogo2 from "../MEDIA/images/Herosection/6.jpg";
 import homeLogo3 from "../MEDIA/images/Herosection/Reloj.jpg";
 // import Particle from "../Particle";
 import Particle from "../components/Particle";
-//import Home2 from "./Home2";
 import Type from "../components/Type";
 import Type2 from "../components/Type2";
 import Type3 from "../components/Type3";
