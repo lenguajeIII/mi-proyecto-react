@@ -50,7 +50,7 @@ const mockProducts = [
   { id: 12, title: "VISTA", category: "Categoría B", imageUrl: retrato12 },
 
 ];
-
+<particle></particle>
 function Portrait() {
   const [products] = useState(mockProducts);
   const [searchTerm, setSearchTerm] = useState('');
