@@ -8,17 +8,22 @@ body, html {
   height: 100%;
 }
 
-.h1txt{
+.h2txt{
+  font-family:'Times New Roman', Times, serif;
   margin-top: 18%;
   text-align: center;
   justify-content: center;
-  color: rgb(156, 71, 146);
+  color: #b165e0;
+  
 }
 .flp{
+  
   display: flex;
   justify-content: space-between;
   margin: 5rem 10rem 15rem 10rem;
-
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .background_ctm {
@@ -49,19 +54,28 @@ label {
 
 input[type="text"],
 input[type="email"],
-input[type="number"] {
+input[type="number"], 
+input, textarea{
   width: calc(100% - 12px);
   padding: 6px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #a078b986;
   border-radius: 15px;
+  
+}
+
+.form-txt a{
+  color: #76b28e;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 input[type="submit"] {
   width: 100%;
   padding: 10px;
-  background: rgb(149,77,184);
-  background: radial-gradient(circle, rgba(149,77,184,1) 17%, rgba(191,73,97,1) 97%);
+  background: rgb(183,135,206);
+  background: radial-gradient(circle, rgba(183,135,206,1) 14%, rgba(213,132,148,1) 97%);
   color: #1f1d1d;
   border: none;
   border-radius: 10px;
