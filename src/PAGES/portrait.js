@@ -37,6 +37,7 @@ const title = typeof document !== 'undefined' ? document.title : 'Check out this
 const mockProducts = [
   
   { id: 1 ,title: "MODA" , category: "Categoría A", imageUrl: retrato1},
+  
   { id: 2, title: "CIELO", category: "Categoría B", imageUrl: retrato2 },
   { id: 3, title: "MODELAJE", category: "Categoría A", imageUrl:retrato3 },
   { id: 4, title: "TENDENCIA", category: "Categoría B", imageUrl: retrato4 },
@@ -62,6 +63,7 @@ function Portrait() {
   const filteredProducts = products.filter(product =>
     product.title.toLowerCase().includes(searchTerm.toLowerCase())
     
+    
   );
 
   return (
@@ -85,8 +87,8 @@ function Portrait() {
     <Col key={product.id} xs={12} md={4} lg={3} className="mb-4">
       <div className="product-item">
         {/* Asegúrate de que product.imageUrl apunte a la URL correcta */}
-        <img src={product.imageUrl} alt={product.title} className="img-fluid" />
-        <h4>{product.title}</h4>
+        <img src={product.imageUrl} alt={product.title} className="img-fluid"/>
+                <h4>{product.title}</h4>
         <h6>{product.category}</h6>
 
         <div className="App">

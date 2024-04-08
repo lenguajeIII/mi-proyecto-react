@@ -6,7 +6,7 @@ html {
   );
 
   --image-gradient: linear-gradient(
-    to bottom left,
+    to bottom left,project-card
     rgba(17, 16, 16, 0.678),
     rgba(12, 10, 22, 0.863)
   );
@@ -486,7 +486,7 @@ body {
 }
 
 .project-card {
-  padding-top: 100px !important;
+  padding-top: 10px !important;
   padding-bottom: 445px !important;
   padding-left: 25px !important;
   padding-right: 25px !important;
@@ -494,7 +494,7 @@ body {
 }
 
 .project-card-view {
-  box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
+  box-shadow: 0 4px 5px 3px rgba(123, 8, 155, 0.459) !important;
   color: white !important;
   background-color: transparent !important;
   opacity: 0.9 !important;
