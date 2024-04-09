@@ -7,28 +7,24 @@ import Samsung from "../MEDIA/images/Productos/televisores/samsung65.avif";
 import LG from "../MEDIA/images/Productos/televisores/lg.avif";
 import Tekno from "../MEDIA/images/Productos/televisores/tekno.webp";
 import Jvc from "../MEDIA/images/Productos/televisores/jvc.webp";
-import Hogar from "../MEDIA/images/Productos/Producto1.jpg";
-import Tecnologia from "../MEDIA/images/Productos/Producto2.jpg";
-
+import s23 from "../MEDIA/images/Productos/celulares/s23.jpeg";
+import S22 from "../MEDIA/images/Productos/celulares/s22.jpeg";
+import Vasos from "../MEDIA/images/Productos/celulares/vasos.jpeg";
 const mockProducts = [
   
-  { id: 1 ,title: "Televisor Samsung" , category: "Categoría A", imageUrl: Samsung},
-  { id: 2, title: "Televisor LG", category: "Categoría A", imageUrl: LG },
-  { id: 3, title: "Televisor JVC", category: "Categoría A", imageUrl: Jvc },
-  { id: 4, title: "Televisor Tekno", category: "Categoría A", imageUrl: Tekno },
-  { id: 5 ,title: "Televisor Samsung" , category: "Categoría A", imageUrl:Samsung },
-  { id: 6, title: "Televisor LG", category: "Categoría A", imageUrl:LG },
-  { id: 7,title: "Televisor JVC", category: "Categoría A", imageUrl:Jvc },
-  { id: 8, title: "Televisor Tekno", category: "Categoría A", imageUrl:Tekno},
+  { id: 1 ,title: "Televisores Samsung" , category: "Categoría A", imageUrl: Samsung},
+  { id: 2, title: "Televisores LG", category: "Categoría A", imageUrl: LG },
+  { id: 3, title: "Televisores JVC", category: "Categoría A", imageUrl: Jvc },
+  { id: 4, title: "TTelevisores Tekno", category: "Categoría A", imageUrl: Tekno },
   // celulares
-  { id: 1 ,title: "Celular Samsung S23" , category: "Categoría B", imageUrl: Tecnologia},
-  { id: 2, title: "Celular Samsung S22", category: "Categoría B", imageUrl: Hogar },
-  { id: 3, title: "Celular Samsung S21", category: "Categoría B", imageUrl:Tecnologia },
-  { id: 4, title: "Celular Samsung S20", category: "Categoría B", imageUrl: Hogar },
-  { id: 5 ,title: "Celular Samsung S19" , category: "Categoría B", imageUrl: Tecnologia},
-  { id: 6, title: "Celular Iphone X", category: "Categoría B", imageUrl: Hogar },
-  { id: 7,title: "Celular Iphone 11", category: "Categoría B", imageUrl:Tecnologia },
-  { id: 8, title: "Celular Iphone 12", category: "Categoría B", imageUrl: Hogar },
+  { id: 1 ,title: "Celular Samsung S23" , category: "Categoría B", imageUrl: s23},
+  { id: 2, title: "Celular Samsung S22", category: "Categoría B", imageUrl: S22},
+  { id: 3, title: "Celular Samsung S21", category: "Categoría B", imageUrl:s23 },
+  { id: 4, title: "Celular Samsung S20", category: "Categoría B", imageUrl: S22 },
+  // vidreria
+  { id: 1 ,title: "Vasos" , category: "Categoría C", imageUrl: Vasos},
+
+ 
 ];
 
 function Product() {
@@ -54,6 +50,8 @@ function Product() {
   return (
     <Container>
       <Particle />
+      <hr></hr>
+      <hr></hr>
       <h1 className="product-gallery-header">GALERÍA DE PRODUCTOS</h1>
       <InputGroup className="mb-3 search-bar-container">
         <FormControl
@@ -64,7 +62,7 @@ function Product() {
           <option value="">Todas las Categorías</option>
           <option value="Categoría A">Televisores</option>
           <option value="Categoría B">Celulares</option>
-          <option value="Categoría C">Categoría C</option>
+          <option value="Categoría C">Vasos</option>
         </FormControl>
         <Button variant="outline-secondary">Buscar</Button>
       </InputGroup>

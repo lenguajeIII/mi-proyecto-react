@@ -1,4 +1,3 @@
-/* Product.css */
 .product-gallery-header {
   text-align: left;
   margin-bottom: 2rem;
@@ -9,93 +8,57 @@
   font-family: 'Arial', sans-serif; 
 }
 
-
-.product-item h5 {
-  color: #FFFFFF; 
-  margin-top: 0.5rem;
-  font-size: 1.0rem;
-  font-family: 'Arial', sans-serif; 
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
-
-.product-item img {
-  width: 100%; 
-  height: 200px; 
-  object-fit: cover; 
-  margin-bottom: 1rem;
+.input-group {
+  max-width: 500px; 
 }
 
+/* Contenedor principal de la galería de productos, ajusta según tu HTML */
+.product-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta el tamaño mínimo como desees */
+  gap: 20px; /* Espacio entre elementos */
+  padding: 10px;
+}
 
 .product-item {
-  
+  border: 2px solid #600463;
   border-radius: 1rem;
   padding: 1rem;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
 }
-
 
 .product-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px); 
+  box-shadow: 0 5px 15px rgba(0, 2, 0, 0.1); 
 }
 
+.product-item img {
+  width: 100%; /* Ajusta la imagen para llenar el ancho del contenedor */
+  height: 200px; /* Ajusta esto a la altura deseada */
+  margin-bottom: 1rem;
+  object-fit: cover; /* Cambia a 'cover' para que las imágenes cubran el área designada */
+}
+
+.product-item h5 {
+  color: #ea2ef1;
+  margin-top: 0.5rem;
+  font-size: 1.0rem;  
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  font-family: 'Arial', sans-serif;
+}
 
 @media screen and (max-width: 600px) {
   .product-gallery {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr; /* En pantallas pequeñas, los elementos se apilan */
   }
-
 }
-  
-  .search-bar-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2rem;
-  }
-  
-  .input-group {
-    max-width: 500px; /* Limitar el ancho del campo de búsqueda */
-  }
-  
-  
-  
-  .product-item {
-    border: 2px solid #600463; /* Borde más claro */
-    border-radius: 1rem;
-    padding: 1rem;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  }
-  
-  .product-item:hover {
-    transform: scale(); /* Ligeramente más grande al pasar el mouse */
-    box-shadow: 0 5px 15px rgba(0, 2, 0, 0.1); /* Sombra suave al pasar el mouse */
-  }
-  
-  .product-item img {
-    height: auto; /* Altura fija para uniformidad */
-    width: auto; /* Ancho automático para mantener la relación de aspecto */
-    margin-bottom: 1rem;
-    object-fit: contain; /* Asegurar que la imagen se ajuste correctamente */
-  }
-  .product-item h4 {
-    color: #ea2ef1;
-    margin-top: 0.5rem;
-    font-size: 1.0rem; /* Tamaño de fuente más grande para los títulos */
-  }
-  
-  .product-item h5 {
-    color: #ea2ef1;
-    margin-top: 0.5rem;
-    font-size: 1.0rem; /* Tamaño de fuente más grande para los títulos */
-  }
-
-  .product-item h6 {
-    color: #ea2ef1;
-    margin-top: 0.5rem;
-    font-size: 1.0rem; /* Tamaño de fuente más grande para los títulos */
-  }
-
