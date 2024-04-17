@@ -1,14 +1,12 @@
+----
 /* --------- */
 /* Contactme */
 /* --------- */
 
 body, html {
   margin: 0;
-  padding: 0.5px;
+  padding: 0;
   height: 100%;
-  position: relative;
-  
-  
 }
 
 .h2txt{

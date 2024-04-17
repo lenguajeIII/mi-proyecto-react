@@ -32,7 +32,7 @@ import Login from "./PAGES/Login";
 import Food from "./PAGES/food";
 import Portrait from "./PAGES/portrait";
 import Product from "./PAGES/product";
-
+import Gracias from "./PAGES/gracias";
 function App() {
   const [load, upadateLoad] = useState(true);
 
@@ -59,6 +59,7 @@ function App() {
           <Route path="/food" element={<Food />} />
           <Route path="/portrait" element={<Portrait />} />
           <Route path="/product" element={<Product />} />
+          <Route path="/gracias" element={<Gracias />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
         <Footer />
