@@ -16,24 +16,105 @@ import { LuUser } from "react-icons/lu";
 // import bitsOfCode from "../../Assets/Projects/blog.png";
 
 
+
+
+
+import { useState, useEffect } from "react";
+// import fs from "fs-extra";
+
 export const LoginButton = () => {
   const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
+  const [showImageUploadButton, setShowImageUploadButton] = useState(false);
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      setShowImageUploadButton(true);
+    }
+  }, [isAuthenticated]);
+
+  const handleImageUpload = async () => {
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = 'image/*';
+    fileInput.onchange = async (event) => {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = async (e) => {
+          const imageData = e.target.result;
+          // Guardar la imagen en una carpeta local de Windows
+          await saveImageLocally(file.name, imageData);
+        };
+        reader.readAsDataURL(file);
+      }
+    };
+    fileInput.click();
+  };
+
+  const saveImageLocally = async (fileName, imageData) => {
+    try {
+      // Crea la carpeta si no existe
+      // await fs.ensureDir('images');
+      // Guarda la imagen en la carpeta
+      // await fs.writeFile(`images/${fileName}`, imageData);
+      alert('Imagen cargada exitosamente');
+    } catch (error) {
+      console.error('Error al guardar la imagen:', error);
+      alert('Error al guardar la imagen');
+    }
+  };
+
+  const handleLogin = () => {
+    loginWithRedirect();
+  };
+
+  const handleLogout = () => {
+    logout({ returnTo: window.location.origin });
+  };
 
   return (
     <div>
       {isAuthenticated ? (
-        <button className="transparent-button" onClick={() => logout({ returnTo: window.location.origin })}>
-          Logout
-        </button>
+        <>
+          <button className="transparent-button" onClick={handleLogout}>
+            Logout /
+          </button>
+          {showImageUploadButton && (
+            <button className="transparent-button" onClick={handleImageUpload}>
+              / Agregar Imágenes
+            </button>
+          )}
+        </>
       ) : (
-        <button className="transparent-button" onClick={() => loginWithRedirect()}>
-          <LuUser style={{ marginBottom: "4px" }}/>
+        <button className="transparent-button" onClick={handleLogin}>
+          <LuUser style={{ marginBottom: "4px" }} />
           Login
         </button>
       )}
     </div>
   );
 };
+
+
+
+// export const LoginButton = () => {
+//   const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
+
+//   return (
+//     <div>
+//       {isAuthenticated ? (
+//         <button className="transparent-button" onClick={() => logout({ returnTo: window.location.origin })}>
+//           Logout
+//         </button>
+//       ) : (
+//         <button className="transparent-button" onClick={() => loginWithRedirect()}>
+//           <LuUser style={{ marginBottom: "4px" }}/>
+//           Login
+//         </button>
+//       )}
+//     </div>
+//   );
+// };
 
 
 // export const LoginButton = () => {
