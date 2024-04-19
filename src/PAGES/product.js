@@ -14,17 +14,17 @@ import S22 from "../MEDIA/images/Productos/celulares/s22.jpeg";
 import Vasos from "../MEDIA/images/Productos/celulares/vasos.jpeg";
 const mockProducts = [
   
-  { id: 1 ,title: "Televisores Samsung" , category: "Categoría A", imageUrl: Samsung,rating: 0 },
-  { id: 2, title: "Televisores LG", category: "Categoría A", imageUrl: LG,rating: 0  },
-  { id: 3, title: "Televisores JVC", category: "Categoría A", imageUrl: Jvc ,rating: 0 },
-  { id: 4, title: "TTelevisores Tekno", category: "Categoría A", imageUrl: Tekno,rating: 0  },
+  { id: 101 ,title: "Televisores Samsung" , category: "Categoría A", imageUrl: Samsung,rating: 0 },
+  { id: 102, title: "Televisores LG", category: "Categoría A", imageUrl: LG,rating: 0 },
+  { id: 103, title: "Televisores JVC", category: "Categoría A", imageUrl: Jvc ,rating: 0},
+  { id: 104, title: "TTelevisores Tekno", category: "Categoría A", imageUrl: Tekno,rating: 0 },
   // celulares
-  { id: 1 ,title: "Celular Samsung S23" , category: "Categoría B", imageUrl: s23,rating: 0 },
-  { id: 2, title: "Celular Samsung S22", category: "Categoría B", imageUrl: S22,rating: 0 },
-  { id: 3, title: "Celular Samsung S21", category: "Categoría B", imageUrl:s23,rating: 0  },
-  { id: 4, title: "Celular Samsung S20", category: "Categoría B", imageUrl: S22,rating: 0  },
+  { id: 201,title: "Celular Samsung S23" , category: "Categoría B", imageUrl: s23,rating: 0},
+  { id: 202, title: "Celular Samsung S22", category: "Categoría B", imageUrl: S22,rating: 0},
+  { id: 203, title: "Celular Samsung S21", category: "Categoría B", imageUrl:s23,rating: 0 },
+  { id: 204, title: "Celular Samsung S20", category: "Categoría B", imageUrl: S22,rating: 0 },
   // vidreria
-  { id: 1 ,title: "Vasos" , category: "Categoría C", imageUrl: Vasos,rating: 0 },
+  { id: 300,title: "Vasos" , category: "Categoría C", imageUrl: Vasos,rating: 0},
 
  
 ];
