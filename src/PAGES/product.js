@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Container, Row, Col, InputGroup, FormControl, Button } from "react-bootstrap";
 import Particle from "../components/Particle";
 
+import StarRatingComponent from 'react-star-rating-component';
+
 // ... Tus importaciones de imágenes ...
 import Samsung from "../MEDIA/images/Productos/televisores/samsung65.avif";
 import LG from "../MEDIA/images/Productos/televisores/lg.avif";
@@ -12,26 +14,28 @@ import S22 from "../MEDIA/images/Productos/celulares/s22.jpeg";
 import Vasos from "../MEDIA/images/Productos/celulares/vasos.jpeg";
 const mockProducts = [
   
-  { id: 1 ,title: "Televisores Samsung" , category: "Categoría A", imageUrl: Samsung},
-  { id: 2, title: "Televisores LG", category: "Categoría A", imageUrl: LG },
-  { id: 3, title: "Televisores JVC", category: "Categoría A", imageUrl: Jvc },
-  { id: 4, title: "TTelevisores Tekno", category: "Categoría A", imageUrl: Tekno },
+  { id: 1 ,title: "Televisores Samsung" , category: "Categoría A", imageUrl: Samsung,rating: 0 },
+  { id: 2, title: "Televisores LG", category: "Categoría A", imageUrl: LG,rating: 0  },
+  { id: 3, title: "Televisores JVC", category: "Categoría A", imageUrl: Jvc ,rating: 0 },
+  { id: 4, title: "TTelevisores Tekno", category: "Categoría A", imageUrl: Tekno,rating: 0  },
   // celulares
-  { id: 1 ,title: "Celular Samsung S23" , category: "Categoría B", imageUrl: s23},
-  { id: 2, title: "Celular Samsung S22", category: "Categoría B", imageUrl: S22},
-  { id: 3, title: "Celular Samsung S21", category: "Categoría B", imageUrl:s23 },
-  { id: 4, title: "Celular Samsung S20", category: "Categoría B", imageUrl: S22 },
+  { id: 1 ,title: "Celular Samsung S23" , category: "Categoría B", imageUrl: s23,rating: 0 },
+  { id: 2, title: "Celular Samsung S22", category: "Categoría B", imageUrl: S22,rating: 0 },
+  { id: 3, title: "Celular Samsung S21", category: "Categoría B", imageUrl:s23,rating: 0  },
+  { id: 4, title: "Celular Samsung S20", category: "Categoría B", imageUrl: S22,rating: 0  },
   // vidreria
-  { id: 1 ,title: "Vasos" , category: "Categoría C", imageUrl: Vasos},
+  { id: 1 ,title: "Vasos" , category: "Categoría C", imageUrl: Vasos,rating: 0 },
 
  
 ];
 
+
+
+
 function Product() {
-  const [products] = useState(mockProducts);
+  const [products,setProducts] = useState(mockProducts);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState(''); // Estado para la categoría seleccionada
-
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
@@ -40,6 +44,19 @@ function Product() {
     // Actualizar el estado con la categoría seleccionada
     setSelectedCategory(event.target.value);
   };
+
+  // starRating
+
+  const onStarClick = (nextValue, prevValue, productId) => {
+    const updatedProducts = products.map(product => {
+      if (product.id === productId) {
+        return { ...product, rating: nextValue };
+      }
+      return product;
+    });
+    setProducts(updatedProducts);
+  };
+
 
   // Filtrar productos por término de búsqueda y categoría seleccionada
   const filteredProducts = products.filter(product =>
@@ -72,9 +89,17 @@ function Product() {
             <div className="product-item">
               <img src={product.imageUrl} alt={product.title} className="img-fluid" />
               <h5>{product.title}</h5>
+              <StarRatingComponent 
+                name="product-rating" 
+                starCount={5}
+                value={product.rating}
+                onStarClick={(nextValue, prevValue) => onStarClick(nextValue, prevValue, product.id)}
+              />
             </div>
           </Col>
         ))}
+
+
       </Row>
     </Container>
   );
