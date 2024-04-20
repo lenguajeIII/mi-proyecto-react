@@ -1,10 +1,14 @@
 
 import React, { useState } from "react";
-import { Container, Row, Col, InputGroup, FormControl } from "react-bootstrap";
+import { Container, Row, Col, InputGroup, FormControl, Button } from "react-bootstrap";
 import "../style.css";
+import {
+  // AiFillGithub,
+  // AiOutlineTwitter,
+  AiFillInstagram, AiOutlineWhatsApp,AiFillTwitterCircle
+} from "react-icons/ai";
 
-
-
+import starRate from "../components/starRate";
 
 import retrato1 from "../MEDIA/images/retrato2.jpg";
 import retrato2 from "../MEDIA/images/retrato3.jpg";
@@ -18,15 +22,6 @@ import retrato9 from "../MEDIA/images/retrato9.jpg";
 import retrato10 from "../MEDIA/images/retrato10.jpeg";
 import retrato11 from "../MEDIA/images/retrato11.jpg";
 import retrato12 from "../MEDIA/images/retrato12.jpg";
-import {
-  FacebookShareButton,
-  TwitterShareButton,
-  WhatsappShareButton,
-  FacebookIcon,
-  TwitterIcon ,
-  WhatsappIcon
-} from "react-share";
-
 
   // Get the URL of the current page dynamically
 const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
@@ -34,19 +29,20 @@ const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
 const title = typeof document !== 'undefined' ? document.title : 'Check out this awesome content!';
 
 
+
 const mockProducts = [
   
   { id: 1 ,title: "MODA" , category: "Categoría A", imageUrl: retrato1},
   
   { id: 2, title: "CIELO", category: "Categoría B", imageUrl: retrato2 },
-  { id: 3, title: "MODELAJE", category: "Categoría A", imageUrl:retrato3 },
+  { id: 3, title: "MODELAJE", category: "Categoría C", imageUrl:retrato3 },
   { id: 4, title: "TENDENCIA", category: "Categoría B", imageUrl: retrato4 },
   { id: 5, title: "ARTE", category: "Categoría A", imageUrl:retrato5 },
   { id: 6, title: "ABSTRACTO", category: "Categoría B", imageUrl: retrato6 },
   { id: 7, title: "VIAJERO", category: "Categoría A", imageUrl:retrato7 },
   { id: 8, title: "CABELLO", category: "Categoría B", imageUrl: retrato8 },
   { id: 9, title: "ARBOLES", category: "Categoría A", imageUrl:retrato9 },
-  { id: 10, title: "ROSTROS", category: "Categoría B", imageUrl: retrato10 },
+  { id: 10, title: "ROSTROS", category: "Categoría C", imageUrl: retrato10 },
   { id: 11, title: "VER", category: "Categoría A", imageUrl:retrato11 },
   { id: 12, title: "VISTA", category: "Categoría B", imageUrl: retrato12 },
 
@@ -55,31 +51,51 @@ const mockProducts = [
 function Portrait() {
   const [products] = useState(mockProducts);
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('');
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
 
-  const filteredProducts = products.filter(product =>
-    product.title.toLowerCase().includes(searchTerm.toLowerCase())
-    
-    
-  );
+  const handleCategoryChange = (event) => {
+    // Actualizar el estado con la categoría seleccionada
+    setSelectedCategory(event.target.value);
+  };
 
+  const filteredProducts = products.filter(product =>
+    product.title.toLowerCase().includes(searchTerm.toLowerCase()) &&
+    (selectedCategory ? product.category === selectedCategory : true)
+  );
+<starRate/>
   return (
+    
     <Container>
      
       <hr></hr>
       <hr></hr>
       <hr></hr>
       <h4 className="product-gallery-header">GALERÍA DE RETRATOS PROFESIONALES</h4>
-     
+{/*      
       <InputGroup className="mb-3 search-bar-container">
         <FormControl
           placeholder="Buscar retratos..."
           onChange={handleSearchChange}
         />
        
+      </InputGroup> */}
+
+<InputGroup className="mb-3 search-bar-container">
+        <FormControl
+          placeholder="Buscar retratos..."
+          onChange={handleSearchChange}
+        />
+        <FormControl as="select" onChange={handleCategoryChange} value={selectedCategory}>
+          <option value="">Todas las Categorías</option>
+          <option value="Categoría A">Categoría A</option>
+          <option value="Categoría B">Categoría B</option>
+          <option value="Categoría C">Categoría C</option>
+        </FormControl>
+        <Button variant="outline-secondary">Buscar</Button>
       </InputGroup>
      
       <Row>
@@ -90,8 +106,38 @@ function Portrait() {
         <img src={product.imageUrl} alt={product.title} className="img-fluid"/>
                 <h4>{product.title}</h4>
         <h6>{product.category}</h6>
-
-        <div className="App">
+        <h6>¡Comparte en tus redes sociales!</h6>
+        <Col md="4" className="footer-body"> 
+          <a
+                  href="https://www.instagram.com/delcidaziel/"
+                  style={{ color: "white" }}
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <AiFillInstagram />
+          </a>
+          <a
+                  href="https://wa.me/50433979041"
+                  style={{ color: "white" }}
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <AiOutlineWhatsApp />
+          </a>
+          <a
+                  href="https://twitter.com/home?lang=es"
+                  style={{ color: "white" }}
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <AiFillTwitterCircle />
+          </a>
+        </Col>
+        <>
+        <starRate/>
+        </>
+        
+        {/* <div className="App"  > 
       <div className="main">
         <h6>¡Comparte en tus redes sociales!</h6>
       </div>
@@ -106,7 +152,7 @@ function Portrait() {
           <WhatsappIcon round/>
         </WhatsappShareButton>
       </div>
-    </div>
+    </div> */}
 
       </div>
      
@@ -117,7 +163,6 @@ function Portrait() {
     </Container>
   );
 }
-
 
 
 export default Portrait;
