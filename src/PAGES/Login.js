@@ -5,6 +5,7 @@ import { Container } from "react-bootstrap";
 // import ProjectCard from "./ProjectCards";
 import Particle from "../components/Particle";
 import { LuUser } from "react-icons/lu";
+import Permiso from "./validar.js";
 // import leaf from "../../Assets/Projects/leaf.jpg";
 // import baleada from "../../MEDIA/images/baleada.jpg";
 // import retrato from "../../MEDIA/images/retrato.jpeg";
@@ -25,6 +26,8 @@ import { useState, useEffect } from "react";
 export const LoginButton = () => {
   const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
   const [showImageUploadButton, setShowImageUploadButton] = useState(false);
+  localStorage.setItem('estado','false');
+  console.log('estado inicial:' +localStorage.getItem('estado'));
 
   useEffect(() => {
     if (isAuthenticated) {
@@ -64,12 +67,17 @@ export const LoginButton = () => {
     }
   };
 
+
   const handleLogin = () => {
     loginWithRedirect();
+    localStorage.setItem('estado','false')
+    console.log( localStorage.getItem('estado'));
   };
 
   const handleLogout = () => {
     logout({ returnTo: window.location.origin });
+    localStorage.setItem('estado','true')
+    console.log( localStorage.getItem('estado'));
   };
 
   return (
