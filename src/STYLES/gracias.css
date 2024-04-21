@@ -1,0 +1,9 @@
+.h2txt {
+    max-width: 400px;
+    margin: 290px auto;
+    background: rgb(135,73,179);
+    background: radial-gradient(circle, rgba(135,73,179,0.6778361002604167) 0%, rgba(78,107,142,1) 100%);
+    padding: 1%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }

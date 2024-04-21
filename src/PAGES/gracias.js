@@ -10,11 +10,10 @@ function Gracias() {
       <Particle />
 
       <html lang="es">
-        <body className="flp">
-          <h2 className="h2txt">Muchas gracias por ponerse en contacto.
-          </h2>
-          
-        </body>
+        
+            <h2 className="h2txt">Muchas gracias por ponerse en contacto.
+            </h2>
+        
       </html>
     </Container>  
   );

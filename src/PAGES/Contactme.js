@@ -34,15 +34,10 @@ function Contactme() {
       <Particle />
 
       <html lang="es">
-        <body className="flp">
-          <h2 className="h2txt">
-            Puedes contactar al Fotógrafo
-            <p>para contratar sus servicios ó</p>
-            <p>hacer tus preguntas</p>
-          </h2>
+        <body>
           <div className="background_ctm">
             <div className="container_ctm">
-              <h2>¡Contáctanos!</h2>
+            <h5>¡Contácta al Fotógrafo,  <br/> puedes hacer tus preguntar <br/> ó contratar sus servicios!</h5>
               <form onSubmit={handleSubmit}>
                 <label htmlFor="nombre">Nombre:</label>
                 <input

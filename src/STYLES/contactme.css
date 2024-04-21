@@ -5,7 +5,7 @@
 
 body, html {
   margin: 0;
-  padding: 0;
+  padding: 1%;
   height: 100%;
 }
 
@@ -28,7 +28,7 @@ body, html {
 }
 
 .background_ctm {
-   /* Cambia 'background_image.jpg' por la ruta de tu imagen de fondo */
+  background-image: url('https://academiaarteflorencia.com/_lib/file/img/eventos/VYZ53P5CKBGHTO44J7XNWIZUJQ.jpg'); 
   background-size: cover;
   background-position: center;
   height: 150%;
@@ -36,11 +36,11 @@ body, html {
 
 .container_ctm {
   max-width: 400px;
-  margin: 50px auto;
+  margin: 100px auto;
   background: rgb(135,73,179);
-background: radial-gradient(circle, rgba(135,73,179,0.6778361002604167) 0%, rgba(78,107,142,1) 100%);
+  background: radial-gradient(circle, rgba(135,73,179,0.6778361002604167) 0%, rgba(78,107,142,1) 100%);
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 h2 {
