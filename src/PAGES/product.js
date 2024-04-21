@@ -2,36 +2,43 @@ import React, { useState } from "react";
 import { Container, Row, Col, InputGroup, FormControl, Button } from "react-bootstrap";
 import Particle from "../components/Particle";
 
+import StarRatingComponent from 'react-star-rating-component';
+
 // ... Tus importaciones de imágenes ...
-import Samsung from "../MEDIA/images/Productos/televisores/samsung65.avif";
-import LG from "../MEDIA/images/Productos/televisores/lg.avif";
-import Tekno from "../MEDIA/images/Productos/televisores/tekno.webp";
-import Jvc from "../MEDIA/images/Productos/televisores/jvc.webp";
-import s23 from "../MEDIA/images/Productos/celulares/s23.jpeg";
-import S22 from "../MEDIA/images/Productos/celulares/s22.jpeg";
-import Vasos from "../MEDIA/images/Productos/celulares/vasos.jpeg";
+import vtchileno from"../MEDIA/images/Productos/vasos/vasotqchile.jpeg";
+import ttcopa from"../MEDIA/images/Productos/vasos/ttcopa.jpeg";
+import pdecorativa from"../MEDIA/images/Productos/decoracion/plantadcorativa.jpeg";
+import snavidad from"../MEDIA/images/Productos/servilletero/snavidad.jpeg";
+import shome from"../MEDIA/images/Productos/servilletero/shome.jpeg";
+import airpords from"../MEDIA/images/Productos/tecnologia/aipords.jpeg";
+import paga from"../MEDIA/images/Productos/perfumes/paga.jpeg";
+import aco from "../MEDIA/images/Productos/aretes/aritcasaoro.jpeg";
+
 const mockProducts = [
   
-  { id: 1 ,title: "Televisores Samsung" , category: "Categoría A", imageUrl: Samsung},
-  { id: 2, title: "Televisores LG", category: "Categoría A", imageUrl: LG },
-  { id: 3, title: "Televisores JVC", category: "Categoría A", imageUrl: Jvc },
-  { id: 4, title: "TTelevisores Tekno", category: "Categoría A", imageUrl: Tekno },
+  { id: 3,title: "Vasos Tequileros Chile", category: "Categoría A", imageUrl: vtchileno,rating: 0 },
+  { id: 4,title: "Vasos Tequileros tipo copa", category: "Categoría A", imageUrl: ttcopa,rating: 0 },
+  { id: 5,title: "Planta decorativa", category: "Categoría B", imageUrl: pdecorativa,rating: 0 },
+  { id: 6,title: "Servilletero de Navidad", category: "Categoría C", imageUrl: snavidad,rating: 0 },
+  { id: 7,title: "Servilletero Home", category: "Categoría C", imageUrl: shome,rating: 0 },
+  { id: 8,title: "Apple Airpords", category: "Categoría D", imageUrl: airpords,rating: 0 },
+  { id: 9,title: "Perfume Agua Gio Armany", category: "Categoría E", imageUrl: paga,rating: 0 },
+  { id: 10,title: "Aretes casa de oro", category: "Categoría E", imageUrl: aco,rating: 0 },
   // celulares
-  { id: 1 ,title: "Celular Samsung S23" , category: "Categoría B", imageUrl: s23},
-  { id: 2, title: "Celular Samsung S22", category: "Categoría B", imageUrl: S22},
-  { id: 3, title: "Celular Samsung S21", category: "Categoría B", imageUrl:s23 },
-  { id: 4, title: "Celular Samsung S20", category: "Categoría B", imageUrl: S22 },
-  // vidreria
-  { id: 1 ,title: "Vasos" , category: "Categoría C", imageUrl: Vasos},
+
+  
+
 
  
 ];
 
+
+
+
 function Product() {
-  const [products] = useState(mockProducts);
+  const [products,setProducts] = useState(mockProducts);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState(''); // Estado para la categoría seleccionada
-
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
@@ -40,6 +47,19 @@ function Product() {
     // Actualizar el estado con la categoría seleccionada
     setSelectedCategory(event.target.value);
   };
+
+  // starRating
+
+  const onStarClick = (nextValue, prevValue, productId) => {
+    const updatedProducts = products.map(product => {
+      if (product.id === productId) {
+        return { ...product, rating: nextValue };
+      }
+      return product;
+    });
+    setProducts(updatedProducts);
+  };
+
 
   // Filtrar productos por término de búsqueda y categoría seleccionada
   const filteredProducts = products.filter(product =>
@@ -60,9 +80,11 @@ function Product() {
         />
         <FormControl as="select" onChange={handleCategoryChange} value={selectedCategory}>
           <option value="">Todas las Categorías</option>
-          <option value="Categoría A">Televisores</option>
-          <option value="Categoría B">Celulares</option>
-          <option value="Categoría C">Vasos</option>
+          <option value="Categoría A">Vasos Tequileros</option>
+          <option value="Categoría B">Decoracion</option>
+          <option value="Categoría C">Servilletero</option>
+          <option value="Categoría D">Tecnologia</option>
+          <option value="Categoría E">Perfume</option>
         </FormControl>
         <Button variant="outline-secondary">Buscar</Button>
       </InputGroup>
@@ -72,9 +94,17 @@ function Product() {
             <div className="product-item">
               <img src={product.imageUrl} alt={product.title} className="img-fluid" />
               <h5>{product.title}</h5>
+              <StarRatingComponent 
+                name="product-rating" 
+                starCount={5}
+                value={product.rating}
+                onStarClick={(nextValue, prevValue) => onStarClick(nextValue, prevValue, product.id)}
+              />
             </div>
           </Col>
         ))}
+
+
       </Row>
     </Container>
   );

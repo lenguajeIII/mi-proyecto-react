@@ -251,7 +251,7 @@ button:focus {
 }
 
 .home-header {
-  padding-top: 80px !important;
+  padding-top: 0px !important;
 }
 
 .home-section {
@@ -261,7 +261,7 @@ button:focus {
   background-position: top center;
   background-repeat: no-repeat;
   padding-bottom: 30px !important;
-  padding-top: 30px !important;
+  padding-top: 0px !important;
 }
 
 .home-content {
@@ -581,6 +581,25 @@ body {
   display: inline-flex; 
   gap: 9px;
 }
+
+.product-item h4 {
+  color: #ea2ef1;
+  margin-top: 0.5rem;
+  font-size: 1.0rem; /* Tamaño de fuente más grande para los títulos */
+}
+
+.product-item h5 {
+  color: #ea2ef1;
+  margin-top: 0.5rem;
+  font-size: 1.0rem; /* Tamaño de fuente más grande para los títulos */
+}
+
+.product-item h6 {
+  color: #ea2ef1;
+  margin-top: 0.5rem;
+  font-size: 1.0rem; /* Tamaño de fuente más grande para los títulos */
+}
+
 /* --------- */
 /* Resume */
 /* --------- */
