@@ -11,8 +11,8 @@ function Gracias() {
 
       <html lang="es">
         
-            <h2 className="h2txt">Muchas gracias por ponerse en contacto.
-            </h2>
+      <h2 className="h2txt">¡Gracias por ponerse en contacto con El Fotógrafo!
+          <br/>Estamos emocionados de escuchar de usted. <br/>Nos pondremos en contacto con usted pronto.</h2>
         
       </html>
     </Container>  
