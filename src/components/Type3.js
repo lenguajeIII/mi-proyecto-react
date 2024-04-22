@@ -1,25 +1,21 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Link } from "react-router-dom"; // Importar Link de React Router
 import Typewriter from "typewriter-effect";
 
 function Type3() {
   return (
-    <Container>
-      <br></br>
-    <Typewriter
-      options={{
-        strings: [
-          // "Bienvenidos a nuestro Portafolio",
-          "Productos",
-          
-          
-        ],
-        autoStart: true,
-        loop: true,
-        deleteSpeed: 500,
-      }}
-    />
-    </Container>
+    <Link to="/product" style={{ textDecoration: "none", color: "inherit" }}>
+      <Typewriter
+        options={{
+          strings: [
+            "Productos",
+          ],
+          autoStart: true,
+          loop: true,
+          deleteSpeed: 50,
+        }}
+      />
+    </Link>
   );
 }
 
