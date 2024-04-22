@@ -6,7 +6,7 @@
     bottom: 0 !important;
     padding-top: 1em 0 !important;
     padding-bottom: 0 !important ;
-    position: absolute !important;
+    position:fixed !important;
     
   }
   .footer-copywright {
