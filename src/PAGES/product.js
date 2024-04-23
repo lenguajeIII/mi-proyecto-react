@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Container, Row, Col, InputGroup, FormControl, Button } from "react-bootstrap";
 import Particle from "../components/Particle";
 
+import {AiFillInstagram, AiOutlineWhatsApp, AiFillTwitterCircle} from "react-icons/ai";
+
 import StarRatingComponent from 'react-star-rating-component';
 
 // ... Tus importaciones de imágenes ...
@@ -24,12 +26,7 @@ const mockProducts = [
   { id: 8,title: "Apple Airpords", category: "Categoría D", imageUrl: airpords,rating: 0 },
   { id: 9,title: "Perfume Agua Gio Armany", category: "Categoría E", imageUrl: paga,rating: 0 },
   { id: 10,title: "Aretes casa de oro", category: "Categoría E", imageUrl: aco,rating: 0 },
-  // celulares
 
-  
-
-
- 
 ];
 
 
@@ -94,6 +91,18 @@ function Product() {
             <div className="product-item">
               <img src={product.imageUrl} alt={product.title} className="img-fluid" />
               <h5>{product.title}</h5>
+              <div className="footer-body">
+                <h6>¡Comparte en tus redes sociales!</h6>
+                <a href="https://www.instagram.com/delcidaziel/" style={{ color: "white" }} target="_blank" rel="noopener noreferrer">
+                  <AiFillInstagram />
+                </a>
+                <a href="https://wa.me/50433979041" style={{ color: "white" }} target="_blank" rel="noopener noreferrer">
+                  <AiOutlineWhatsApp />
+                </a>
+                <a href="https://twitter.com/home?lang=es" style={{ color: "white" }} target="_blank" rel="noopener noreferrer">
+                  <AiFillTwitterCircle />
+                </a>
+              </div>
               <StarRatingComponent 
                 name="product-rating" 
                 starCount={5}
