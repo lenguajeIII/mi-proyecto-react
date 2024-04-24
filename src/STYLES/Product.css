@@ -63,3 +63,25 @@
     grid-template-columns: 1fr; /* En pantallas pequeñas, los elementos se apilan */
   }
 }
+.expanded {
+  transform: scale(2); /* Ajusta esto según el tamaño deseado */
+  z-index: 2; /* Asegúrate de que la imagen está sobre otros elementos */
+  transition: transform 0.3s; /* Para suavizar la transición */
+  cursor: default; /* Cambiar el cursor para indicar que no es clickeable cuando está expandida */
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3; /* El botón debe estar sobre la imagen expandida */
+  background: #f00; /* Fondo rojo, cambia según tus preferencias */
+  color: #fff; /* Color blanco del texto, cambia según tus preferencias */
+  border: none; /* Sin borde */
+  padding: 0.5em; /* Ajusta el padding según necesites */
+  cursor: pointer; /* Cambiar el cursor para indicar que es clickeable */
+}
+
+.product-item {
+  position: relative; /* Para posicionar el botón de cierre */
+}

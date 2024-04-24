@@ -45,7 +45,13 @@ function Product() {
   const [selectedStar, setSelectedStar] = useState('');
   const [showDetails, setShowDetails] = useState(Array(mockProducts.length).fill(false));
 
-  
+//Expansion de imagenes
+  const [expandedImg, setExpandedImg] = useState(null); // Estado para controlar la imagen expandida
+
+  //Manejador para la expansión de la imagen
+  const handleImageClick = (id) => {
+    setExpandedImg(expandedImg === id ? null : id);
+  };
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
@@ -102,6 +108,7 @@ function Product() {
       <hr />
       <h4 className="product-gallery-header">GALERÍA DE PRODUCTOS</h4>
 
+
       <InputGroup className="mb-3 search-bar-container">
         <FormControl
           placeholder="Buscar productos..."
@@ -148,7 +155,15 @@ function Product() {
         {filteredProducts.map(product => (
           <Col key={product.id} xs={12} md={4} lg={3} className="mb-4">
             <div className="product-item">
-              <img src={product.imageUrl} alt={product.title} className="img-fluid"/>
+              {/* Imagen clickeable */}
+        
+              <img 
+                src={product.imageUrl} 
+                alt={product.title} 
+                className={`img-fluid ${expandedImg === product.id ? 'expanded' : ''}`} 
+                onClick={() => handleImageClick(product.id)}
+              />
+             
               <h4>{product.title}</h4>
               {showDetails[product.id - 1] && (
                 <>
@@ -156,6 +171,12 @@ function Product() {
                   <h6>{new Date(product.date).toLocaleDateString()}</h6>
                   {/* Otros detalles del producto */}
                 </>
+              )}
+              
+                {expandedImg === product.id && (
+                <button className="close-btn" onClick={() => setExpandedImg(null)}>
+                  &times;
+                </button>
               )}
               <Button variant="primary" onClick={() => handleShowDetails(product.id)}>
                 {showDetails[product.id - 1] ? 'Mostrar menos' : 'Mostrar más'}
