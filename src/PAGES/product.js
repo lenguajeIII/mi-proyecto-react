@@ -6,8 +6,6 @@ import 'react-datepicker/dist/react-datepicker.css';
 import {AiFillInstagram, AiOutlineWhatsApp, AiFillTwitterCircle} from "react-icons/ai";
 import StarRatingComponent from 'react-star-rating-component';
 
-//Imagenes
-// ... Tus importaciones de imágenes ...
 import vtchileno from"../MEDIA/images/Productos/vasos/vasotqchile.jpeg";
 import ttcopa from"../MEDIA/images/Productos/vasos/ttcopa.jpeg";
 import pdecorativa from"../MEDIA/images/Productos/decoracion/plantadcorativa.jpeg";
@@ -18,12 +16,11 @@ import paga from"../MEDIA/images/Productos/perfumes/paga.jpeg";
 import aco from "../MEDIA/images/Productos/aretes/aritcasaoro.jpeg";
 
 // Get the URL of the current page dynamically
-//const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
+const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
 // Get the Title of the current page dynamically
-//const title = typeof document !== 'undefined' ? document.title : 'Check out this awesome content!';
+const title = typeof document !== 'undefined' ? document.title : 'Check out this awesome content!';
 
 const mockProducts = [
-  
   { id: 3,title: "Vasos Tequileros Chile", category: "Categoría A", imageUrl: vtchileno,rating: 0, date: new Date("01/01/2024").toLocaleDateString()},
   { id: 4,title: "Vasos Tequileros tipo copa", category: "Categoría A", imageUrl: ttcopa,rating: 0,date: new Date("01/02/2024").toLocaleDateString()},
   { id: 5,title: "Planta decorativa", category: "Categoría B", imageUrl: pdecorativa,rating: 0,date: new Date("01/03/2024").toLocaleDateString()}, 
@@ -32,10 +29,8 @@ const mockProducts = [
   { id: 8,title: "Apple Airpords", category: "Categoría D", imageUrl: airpords,rating: 0,date: new Date("01/06/2024").toLocaleDateString()}, 
   { id: 9,title: "Perfume Agua Gio Armany", category: "Categoría E", imageUrl: paga,rating: 0,date: new Date("01/07/2024").toLocaleDateString()},
   { id: 10,title: "Aretes casa de oro", category: "Categoría E", imageUrl: aco,rating: 0,date: new Date("01/08/2024").toLocaleDateString()},
-
+ 
 ];
-
-
 
 function Product() {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -45,13 +40,13 @@ function Product() {
   const [selectedStar, setSelectedStar] = useState('');
   const [showDetails, setShowDetails] = useState(Array(mockProducts.length).fill(false));
 
-//Expansion de imagenes
-  const [expandedImg, setExpandedImg] = useState(null); // Estado para controlar la imagen expandida
+  //Expansion de imagenes
+const [expandedImg, setExpandedImg] = useState(null); // Estado para controlar la imagen expandida
 
-  //Manejador para la expansión de la imagen
-  const handleImageClick = (id) => {
-    setExpandedImg(expandedImg === id ? null : id);
-  };
+//Manejador para la expansión de la imagen
+const handleImageClick = (id) => {
+  setExpandedImg(expandedImg === id ? null : id);
+};
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
@@ -99,15 +94,12 @@ function Product() {
     (selectedDate ? new Date(product.date).toDateString() === selectedDate.toDateString() : true)
   );
 
-
-
   return (
     <Container>
       <hr />
       <hr />
       <hr />
       <h4 className="product-gallery-header">GALERÍA DE PRODUCTOS</h4>
-
 
       <InputGroup className="mb-3 search-bar-container">
         <FormControl
@@ -116,11 +108,9 @@ function Product() {
         />
         <FormControl as="select" onChange={handleCategoryChange} value={selectedCategory}>
           <option value="">Todas las Categorías</option>
-          <option value="Categoría A"> A-Vasos Tequileros</option>
-          <option value="Categoría B"> B-Decoracion</option>
-          <option value="Categoría C"> C-Servilletero</option>
-          <option value="Categoría D"> D-Tecnologia</option>
-          <option value="Categoría E"> E-Perfume</option>
+          <option value="Categoría A">Categoría A</option>
+          <option value="Categoría B">Categoría B</option>
+          <option value="Categoría C">Categoría C</option>
         </FormControl>
         <FormControl as="select" onChange={handleStarChange} value={selectedStar}>
           <option value="">Todas las calificaciones</option>
@@ -155,9 +145,9 @@ function Product() {
         {filteredProducts.map(product => (
           <Col key={product.id} xs={12} md={4} lg={3} className="mb-4">
             <div className="product-item">
-              {/* Imagen clickeable */}
+               {/* Imagen clickeable */}
         
-              <img 
+               <img 
                 src={product.imageUrl} 
                 alt={product.title} 
                 className={`img-fluid ${expandedImg === product.id ? 'expanded' : ''}`} 
@@ -171,12 +161,6 @@ function Product() {
                   <h6>{new Date(product.date).toLocaleDateString()}</h6>
                   {/* Otros detalles del producto */}
                 </>
-              )}
-              
-                {expandedImg === product.id && (
-                <button className="close-btn" onClick={() => setExpandedImg(null)}>
-                  &times;
-                </button>
               )}
               <Button variant="primary" onClick={() => handleShowDetails(product.id)}>
                 {showDetails[product.id - 1] ? 'Mostrar menos' : 'Mostrar más'}
