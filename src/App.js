@@ -5,8 +5,6 @@ import Home from "./PAGES/home";
 import Contactme from "./PAGES/Contactme"
 import { Profile } from "./PAGES/Profile";
 
-// import Home from "./components/Home/Home";
-// import About from "./components/About/About";
 
 import Footer from "./components/Footer";
 
@@ -28,6 +26,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./STYLES/Navbar.css";
 import "./STYLES/food.css";
 import "./STYLES/gracias.css";
+import "./STYLES/gallery.css";
+import "./STYLES/home.css";
+import "./STYLES/preloader.css";
 import Login from "./PAGES/Login";
 // import Logout from "./PAGES/Logout";
 import Food from "./PAGES/food";
