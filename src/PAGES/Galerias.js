@@ -6,9 +6,9 @@ import ProjectCard from "../components/cards";
 import { MdContactPhone } from "react-icons/md";
 
 // Tus imágenes importadas
-import baleada from "../MEDIA/images/baleada.jpg";
-import retrato from "../MEDIA/images/retrato.jpg";
-import bici from "../MEDIA/images/bici.jpg";
+import baleada from "../MEDIA/images/Cards Gallery/baleada.jpg";
+import retrato from "../MEDIA/images/Cards Gallery/retrato.jpg";
+import bici from "../MEDIA/images/Cards Gallery/bici.jpg";
 import { Link } from "react-router-dom";
 
 function Galerias() {
