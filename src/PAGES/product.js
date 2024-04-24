@@ -28,7 +28,7 @@ const mockProducts = [
   { id: 7,title: "Servilletero Home", category: "Categoría C", imageUrl: shome,rating: 0,date: new Date("01/05/2024").toLocaleDateString()}, 
   { id: 8,title: "Apple Airpords", category: "Categoría D", imageUrl: airpords,rating: 0,date: new Date("01/06/2024").toLocaleDateString()}, 
   { id: 9,title: "Perfume Agua Gio Armany", category: "Categoría E", imageUrl: paga,rating: 0,date: new Date("01/07/2024").toLocaleDateString()},
-  { id: 10,title: "Aretes casa de oro", category: "Categoría E", imageUrl: aco,rating: 0,date: new Date("01/08/2024").toLocaleDateString()},
+  { id: 10,title: "Aretes casa de oro", category: "Categoría F", imageUrl: aco,rating: 0,date: new Date("01/08/2024").toLocaleDateString()},
  
 ];
 
@@ -108,10 +108,14 @@ const handleImageClick = (id) => {
         />
         <FormControl as="select" onChange={handleCategoryChange} value={selectedCategory}>
           <option value="">Todas las Categorías</option>
-          <option value="Categoría A">Categoría A</option>
-          <option value="Categoría B">Categoría B</option>
-          <option value="Categoría C">Categoría C</option>
+          <option value="Categoría A"> A-Vasos Tequileros</option>
+          <option value="Categoría B"> B-Decoracion</option>
+          <option value="Categoría C"> C-Servilletero</option>
+          <option value="Categoría D"> D-Tecnologia</option>
+          <option value="Categoría E"> E-Perfume</option>
+          <option value="Categoría F"> F-Aretes</option>
         </FormControl>
+
         <FormControl as="select" onChange={handleStarChange} value={selectedStar}>
           <option value="">Todas las calificaciones</option>
           <option value="5">5 Estrellas</option>
