@@ -48,6 +48,14 @@ function Portrait() {
   const [selectedStar, setSelectedStar] = useState('');
   const [showDetails, setShowDetails] = useState(Array(mockProducts.length).fill(false));
 
+  //Expansion de imagenes
+const [expandedImg, setExpandedImg] = useState(null); // Estado para controlar la imagen expandida
+
+//Manejador para la expansión de la imagen
+const handleImageClick = (id) => {
+  setExpandedImg(expandedImg === id ? null : id);
+};
+
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
@@ -145,7 +153,15 @@ function Portrait() {
         {filteredProducts.map(product => (
           <Col key={product.id} xs={12} md={4} lg={3} className="mb-4">
             <div className="product-item">
-              <img src={product.imageUrl} alt={product.title} className="img-fluid"/>
+               {/* Imagen clickeable */}
+        
+               <img 
+                src={product.imageUrl} 
+                alt={product.title} 
+                className={`img-fluid ${expandedImg === product.id ? 'expanded' : ''}`} 
+                onClick={() => handleImageClick(product.id)}
+              />
+             
               <h4>{product.title}</h4>
               {showDetails[product.id - 1] && (
                 <>
