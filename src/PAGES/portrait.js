@@ -7,18 +7,18 @@ import {AiFillInstagram, AiOutlineWhatsApp, AiFillTwitterCircle} from "react-ico
 import StarRatingComponent from 'react-star-rating-component';
 
 //Imagenes
-import retrato1 from "../MEDIA/images/retrato2.jpg";
-import retrato2 from "../MEDIA/images/retrato3.jpg";
-import retrato3 from "../MEDIA/images/retrato1.jpg";
-import retrato4 from "../MEDIA/images/retrato5.jpeg";
-import retrato5 from "../MEDIA/images/retrato6.jpg";
-import retrato6 from "../MEDIA/images/retrato7.jpg";
-import retrato7 from "../MEDIA/images/retrato8.jpg";
-import retrato8 from "../MEDIA/images/retrato4.jpg";
-import retrato9 from "../MEDIA/images/retrato9.jpg";
-import retrato10 from "../MEDIA/images/retrato10.jpeg";
-import retrato11 from "../MEDIA/images/retrato11.jpg";
-import retrato12 from "../MEDIA/images/retrato12.jpg";
+import retrato1 from "../MEDIA/images/Portrait/retrato2.jpg";
+import retrato2 from "../MEDIA/images/Portrait/retrato3.jpg";
+import retrato3 from "../MEDIA/images/Portrait/retrato1.jpg";
+import retrato4 from "../MEDIA/images/Portrait/retrato5.jpg";
+import retrato5 from "../MEDIA/images/Portrait/retrato6.jpg";
+import retrato6 from "../MEDIA/images/Portrait/retrato7.jpg";
+import retrato7 from "../MEDIA/images/Portrait/retrato8.jpg";
+import retrato8 from "../MEDIA/images/Portrait/retrato4.jpg";
+import retrato9 from "../MEDIA/images/Portrait/retrato9.jpg";
+import retrato10 from "../MEDIA/images/Portrait/retrato10.jpg";
+import retrato11 from "../MEDIA/images/Portrait/retrato11.jpg";
+import retrato12 from "../MEDIA/images/Portrait/retrato12.jpg";
 
 // Get the URL of the current page dynamically
 const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
@@ -26,18 +26,18 @@ const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
 const title = typeof document !== 'undefined' ? document.title : 'Check out this awesome content!';
 
 const mockProducts = [
-  { id: 1 ,title: "MODA" , category: "Categoría A", imageUrl: retrato1,rating: 0, date: new Date("01/03/2024").toLocaleDateString()},
-  { id: 2, title: "CIELO", category: "Categoría B", imageUrl: retrato2,rating: 0, date: new Date("01/03/2024").toLocaleDateString()},
+  { id: 1 ,title: "RFRESCANTE" , category: "Categoría A", imageUrl: retrato1,rating: 0, date: new Date("01/03/2024").toLocaleDateString()},
+  { id: 2, title: "VINTAGE", category: "Categoría B", imageUrl: retrato2,rating: 0, date: new Date("01/03/2024").toLocaleDateString()},
   { id: 3, title: "MODELAJE", category: "Categoría C", imageUrl:retrato3,rating: 0, date: new Date("06/03/2024").toLocaleDateString()},
-  { id: 4, title: "TENDENCIA", category: "Categoría B", imageUrl: retrato4,rating: 0, date: new Date("07/06/2023").toLocaleDateString()},
-  { id: 5, title: "ARTE", category: "Categoría A", imageUrl:retrato5,rating: 0, date: new Date("05/03/2024").toLocaleDateString()},
-  { id: 6, title: "ABSTRACTO", category: "Categoría B", imageUrl: retrato6,rating: 0, date: new Date("05/03/2024").toLocaleDateString()},
-  { id: 7, title: "VIAJERO", category: "Categoría A", imageUrl:retrato7,rating: 0, date: new Date("05/03/2024").toLocaleDateString()},
-  { id: 8, title: "CABELLO", category: "Categoría B", imageUrl: retrato8,rating: 0, date: new Date("11/08/2023").toLocaleDateString()},
-  { id: 9, title: "ARBOLES", category: "Categoría A", imageUrl:retrato9,rating: 0, date: new Date("11/08/2023").toLocaleDateString()},
-  { id: 10, title: "ROSTROS", category: "Categoría C", imageUrl: retrato10,rating: 0, date: new Date("11/07/2023").toLocaleDateString()},
-  { id: 11, title: "VER", category: "Categoría A", imageUrl:retrato11,rating: 0, date: new Date("08/08/2023").toLocaleDateString()},
-  { id: 12, title: "VISTA", category: "Categoría B", imageUrl: retrato12,rating: 0, date: new Date("09/02/2024").toLocaleDateString()},
+  { id: 4, title: "EN EL ESPEJO", category: "Categoría B", imageUrl: retrato4,rating: 0, date: new Date("07/06/2023").toLocaleDateString()},
+  { id: 5, title: "SELFIE", category: "Categoría A", imageUrl:retrato5,rating: 0, date: new Date("05/03/2024").toLocaleDateString()},
+  { id: 6, title: "NATURALEZA", category: "Categoría B", imageUrl: retrato6,rating: 0, date: new Date("05/03/2024").toLocaleDateString()},
+  { id: 7, title: "CON MAMÁ", category: "Categoría A", imageUrl:retrato7,rating: 0, date: new Date("05/03/2024").toLocaleDateString()},
+  { id: 8, title: "PLAYA", category: "Categoría B", imageUrl: retrato8,rating: 0, date: new Date("11/08/2023").toLocaleDateString()},
+  { id: 9, title: "RUBIA", category: "Categoría A", imageUrl:retrato9,rating: 0, date: new Date("11/08/2023").toLocaleDateString()},
+  { id: 10, title: "BARBA", category: "Categoría C", imageUrl: retrato10,rating: 0, date: new Date("11/07/2023").toLocaleDateString()},
+  { id: 11, title: "A LA NADA", category: "Categoría A", imageUrl:retrato11,rating: 0, date: new Date("08/08/2023").toLocaleDateString()},
+  { id: 12, title: "ELEGANTE", category: "Categoría B", imageUrl: retrato12,rating: 0, date: new Date("09/02/2024").toLocaleDateString()},
 ];
 
 function Portrait() {

@@ -43,6 +43,13 @@
   
   .home-header {
     padding-top: 0px !important;
+    color:rgb(144, 135, 148);
+    position: relative;
+    text-align: center;
+    font-size: 1.5em;
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 0px;
+    width: 100%;
   }
   
   .home-section {
@@ -56,7 +63,7 @@
   }
   
   .home-content {
-    padding: 9rem 0 2rem !important;
+    padding: 6cqb 0 2rem !important;
     color: whitesmoke;
     text-align: left;
     justify-content: center;
