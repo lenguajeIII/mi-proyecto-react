@@ -1,19 +1,19 @@
 
-.wave {
-    animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-    animation-duration: 2.1s; /* Change to speed up or slow down */
-    animation-iteration-count: infinite; /* Never stop waving :) */
-    transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+/* .wave {
+    animation-name: wave-animation; 
+    animation-duration: 2.1s; 
+    animation-iteration-count: infinite; 
+    transform-origin: 70% 70%; 
     display: inline-block;
-  }
+  } */
   
-  @keyframes wave-animation {
+  /* @keyframes wave-animation {
     0% {
       transform: rotate(0deg);
     }
     10% {
       transform: rotate(14deg);
-    } /* The following five values can be played with to make the waving more or less extreme */
+    } 
     20% {
       transform: rotate(-8deg);
     }
@@ -28,11 +28,15 @@
     }
     60% {
       transform: rotate(0deg);
-    } /* Reset for the last half to pause */
+    } 
     100% {
       transform: rotate(0deg);
     }
-  }
+  } */
+
+
+  /* #tsparticles: Estilo aplicado a un elemento con id tsparticles. 
+  Fija la posición del elemento, establece la repetición y el tamaño del fondo, y lo hace ocupar todo el ancho y alto de la pantalla.*/
   #tsparticles {
     position: fixed !important;
     background-repeat: no-repeat !important;
@@ -41,8 +45,10 @@
     height: 100%;
   }
   
+  /* Define el estilo del encabezado de la sección principal de la página, incluyendo color de texto, tamaño de fuente y alineación.*/
   .home-header {
     padding-top: 0px !important;
+    padding-bottom: 10px;
     color:rgb(144, 135, 148);
     position: relative;
     text-align: center;
@@ -52,6 +58,7 @@
     width: 100%;
   }
   
+  /* Define el estilo de la sección principal de la página, incluyendo la imagen de fondo y el padding.*/
   .home-section {
     position: relative;
     z-index: -1;
@@ -62,6 +69,7 @@
     padding-top: 0px !important;
   }
   
+  /*Define el estilo del contenido de la sección principal, como el color de texto, el padding y la alineación.*/
   .home-content {
     padding: 6cqb 0 2rem !important;
     color: whitesmoke;
@@ -69,6 +77,7 @@
     justify-content: center;
   }
   
+  /* Define el estilo del encabezado de la página, incluyendo el tamaño de fuente y la posición de fondo. */
   .heading {
     background-position: top center !important;
     justify-content: center;
@@ -76,15 +85,18 @@
     padding-left: 250px !important;
   }
   
+  /* Define el estilo del nombre del encabezado, incluyendo el tamaño de fuente y el padding.*/
   .heading-name {
     font-size: 2.5em !important;
     padding-left: 45px !important;
   }
   
-  .main-name {
+  /* Define el color del texto del nombre principal.*/
+  /* .main-name {
     color: #cd5ff8;
-  }
+  } */
   
+  /*Define el estilo del texto animado, incluyendo el tamaño de fuente, el color y el peso de la fuente.*/
   .Typewriter__wrapper {
     font-size: 2.2em !important;
     color: #be6adf !important;
@@ -95,7 +107,24 @@
     color: #b562d6 !important;
   }
   
-  @media (max-width: 767px) {
+  .social-icons {
+    display: inline-block !important;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+  
+  /* @media (max-width: 767px) {
     .Typewriter__wrapper {
       font-size: 1.4em !important;
       font-weight: 500 !important;
@@ -104,21 +133,21 @@
     .Typewriter__cursor {
       display: none !important;
     }
-  }
+  } */
   
-  .myAvtar {
+  /* .myAvtar {
     justify-content: center !important;
     padding-top: 9em !important;
-  }
+  } */
   
-  @media (max-width: 767px) {
+  /* @media (max-width: 767px) {
     .myAvtar {
       padding-top: 2em !important;
       padding-bottom: 2em !important;
     }
-  }
+  } */
   
-  .home-about-section {
+  /* .home-about-section {
     position: relative;
     padding-bottom: 70px !important;
     padding-top: 70px !important;
@@ -129,9 +158,9 @@
     padding-top: 100px !important;
     padding-bottom: 20px !important;
     text-align: center;
-  }
+  } */
   
-  .home-about-body {
+  /* .home-about-body {
     padding-top: 50px;
     font-size: 1.2em !important;
     text-align: left;
@@ -141,17 +170,17 @@
     text-align: center !important;
     padding-top: 25px;
     color: white !important;
-  }
+  } */
   
-  .home-about-social-links {
+  /* .home-about-social-links {
     justify-content: center !important;
     padding-top: 15px !important;
     display: inline-block !important;
     position: relative !important;
     padding-inline-start: 0 !important;
-  }
+  } */
   
-  .home-social-icons {
+  /* .home-social-icons {
     position: relative !important;
     display: inline-block !important;
     width: 40px !important;
@@ -162,9 +191,9 @@
     background: rgba(255, 255, 255, 0.972) !important;
     border-radius: 50% !important;
     transition: 0.5s !important;
-  }
+  } */
   
-  .home-social-icons::before {
+  /* .home-social-icons::before {
     content: "";
     position: absolute;
     top: 0;
@@ -176,9 +205,9 @@
     transition: 0.5s;
     transform: scale(0.9);
     z-index: -1;
-  }
+  } */
   
-  .home-social-icons:hover::before {
+  /* .home-social-icons:hover::before {
     transform: scale(1.1);
     box-shadow: 0 0 15px #801f95;
   }
@@ -187,40 +216,15 @@
     color: #87209e;
     box-shadow: 0 0 5px #87209e;
     text-shadow: 0 0 2px #87209e;
-  }
-  
-  .social-icons {
-    display: inline-block !important;
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-  
-  .icon-colour {
+  } */
+
+
+  /* .icon-colour {
     color: #700c86 !important;
-  }
+  } */
   
   body {
     position: relative;
     height: auto;
     /* border: 10px solid red; */
-    
-    
-  
-  
-    /* margin: 0;
-    background-color: #333;
-    font-family: sans-serif;
-    color: aliceblue;
-    border: 10px solid red;
-    position: relative;
-    padding-bottom: 2.5em;
-    height: 100vh; */
-  
-  
-    /* display: grid;
-    min-height: 100vh;
-    grid-template-rows: auto 1fr auto; */
-    /* position: relative;
-    padding-bottom: 2em;
-    min-height: 100vh; */
   }

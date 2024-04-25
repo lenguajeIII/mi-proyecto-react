@@ -89,5 +89,6 @@ input[type="submit"]:hover {
 
 .contactme-section {
   position: relative;
-  padding-top: 80px; /* Ajusta el espaciado superior según sea necesario */
+  padding-top: 0px; /* Ajusta el espaciado superior según sea necesario */
+  
 }

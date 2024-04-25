@@ -2,23 +2,20 @@ import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-// import { useAuth0 } from "@auth0/auth0-react";
-// import logo from "../Assets/logo.png";
-// import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
-// import { CgGitFork } from "react-icons/cg";
-// import { ImBlog } from "react-icons/im";
-import {
-  // AiFillStar,
-  AiOutlineHome
-  // AiOutlineUser,
-} from "react-icons/ai";
+
+import { AiOutlineHome} from "react-icons/ai";
 import { IoCameraOutline } from "react-icons/io5";
 import { LoginButton } from "../PAGES/Login";
 import { MdContactPhone } from "react-icons/md";
+//Aquí, se importan los módulos y componentes necesarios para construir la barra de navegación. 
+//Se utilizan componentes de react-bootstrap para la estructura básica y estilos, y también se importan algunos íconos de React (AiOutlineHome, IoCameraOutline, MdContactPhone) 
+//y un componente LoginButton desde otro archivo.
 
-// import { CgFileDocument } from "react-icons/cg";
 
+//Se define un componente de función llamado NavBar. Dentro de este componente, 
+//se utilizan dos useState hooks para manejar el estado de la expansión de la barra de navegación (expand) 
+//y el color del fondo de la barra de navegación (navColour).
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
@@ -33,17 +30,22 @@ function NavBar() {
 
   window.addEventListener("scroll", scrollHandler);
 
+//*Se utiliza el componente Navbar de react-bootstrap con propiedades como expanded, fixed, expand, 
+//y className para controlar su comportamiento y apariencia dependiendo del estado de los hooks.
+
   return (
-    <Navbar
+    <Navbar 
       expanded={expand}
       fixed="top"
       expand="md"
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
+        
         <Navbar.Brand href="/" className="d-flex">
-          {/* <img src={logo} className="img-fluid logo" alt="brand" /> */}
         </Navbar.Brand>
+
+        {/*Se define el botón de alternar para expandir y contraer la barra de navegación en dispositivos móviles.*/}
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
@@ -54,6 +56,12 @@ function NavBar() {
           <span></span>
           <span></span>
         </Navbar.Toggle>
+
+          {/*Aqui definimos la barra de navegación que se muestra en dispositivos móviles.
+            Dentro de <Navbar.Collapse>, se encuentran una serie de elementos Nav.Item y Nav.Link que representan los diferentes elementos de la barra de navegación, 
+            como enlaces a la página de inicio, galería, inicio de sesión y contacto. 
+            Estos elementos utilizan el componente Link de react-router-dom para la navegación dentro de la aplicación React.*/}
+
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
@@ -62,15 +70,6 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
-            {/* <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/about"
-                onClick={() => updateExpanded(false)}
-              >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> Sobre mi
-              </Nav.Link>
-            </Nav.Item> */}
 
             <Nav.Item>
               <Nav.Link
@@ -90,18 +89,7 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link>            
-              <LoginButton />
-              {/* <LogoutButton /> */}
-              {/* <Nav.Link
-                as={Link}
-                to="/login"
-                onClick={() => updateExpanded(false)}
-              >
-                <AiOutlineFundProjectionScreen
-                  style={{ marginBottom: "2px" }}
-                />{" "}
-                Login
-              </Nav.Link> */}
+              <LoginButton />             
               </Nav.Link>
             </Nav.Item>
 
@@ -121,37 +109,7 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
-            
-            {/* <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/food"
-                onClick={() => updateExpanded(false)}
-              >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
-              </Nav.Link>
-            </Nav.Item> */}
-
-            {/* <Nav.Item>
-              <Nav.Link
-               // href="https://soumyajitblogs.vercel.app/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <ImBlog style={{ marginBottom: "2px" }} /> Blogs
-              </Nav.Link>
-            </Nav.Item> */}
-
-            {/* <Nav.Item className="fork-btn">
-              <Button
-                href="https://github.com/soumyajit4419/Portfolio"
-                target="_blank"
-                className="fork-btn-inner"
-              >
-                <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
-                <AiFillStar style={{ fontSize: "1.1em" }} />
-              </Button>
-            </Nav.Item> */}
+          
           </Nav>
         </Navbar.Collapse>
       </Container>

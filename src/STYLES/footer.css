@@ -1,43 +1,43 @@
-/* --------- */
-/* Footer */
-/* --------- */
-.footer {
-    background-color: rgb(10, 4, 22);
-    bottom: 0 !important;
-    padding-top: 1em 0 !important;
-    padding-bottom: 0 !important ;
-    position:fixed !important;
+
+.footer { /* Esta regla establece el estilo para el pie de página en general.*/
+    background-color: rgb(10, 4, 22); /* color fondo */
+    bottom: 0 !important; /* fija el pie de pagina*/
+    padding-top: 1em 0 !important; /*Relleno de parte superior*/
+    padding-bottom: 0 !important ;/*Relleno de parte inferior*/
+    position:fixed !important;/*Fija la posicion */
     
   }
-  .footer-copywright {
+  .footer-copywright { /* estilo para el texto de derechos de autor*/
     text-align: center !important;
   }
   
-  .footer-body {
-    z-index: 0;
-    text-align: center !important;
+  .footer-body { /*estilo para el cuerpo del pie de página, donde están los enlaces o iconos de redes sociales.*/
+    z-index: 0; 
+    text-align: center !important;/*Alinea el contenido al centro.*/
   }
   
-  @media (max-width: 767px) {
+  /* Esta regla se aplica solo cuando el ancho de la ventana del navegador es de 767px o menos. 
+  Es una regla de medios que permite aplicar estilos específicos para diferentes tamaños de pantalla, en este caso, para dispositivos móviles*/
+  @media (max-width: 767px) { 
     .footer-copywright {
-      text-align: center !important;
+      text-align: center !important; /*Alinea el contenido al centro cuando el ancho de la pantalla es menor o igual a 767px.*/
     }
   
     .footer-body {
-      text-align: center !important;
+      text-align: center !important; /*Alinea el contenido al centro cuando el ancho de la pantalla es menor o igual a 767px.*/
     }
   }
   
-  .footer h3 {
-    font-size: 1em;
+  .footer h3 { /*estilo para los encabezados*/
+    font-size: 1em;/*Establece el tamaño de fuente.*/
     color: white !important;
     margin-top: 0.5em !important;
-    margin-bottom: 0.5em !important;
+    margin-bottom: 0.5em !important;/*Añade espacio entre el encabezado y los elementos circundantes.*/
   }
-  .footer-icons {
+  .footer-icons { /*estilo para la lista de iconos de redes sociales en el pie de página.*/
     margin-top: 0.5em !important;
     margin-bottom: 0.5em !important;
-    padding: 0 !important;
+    padding: 0 !important; /*Elimina el relleno alrededor de la lista.*/
   }
   
   .blockquote-footer {
